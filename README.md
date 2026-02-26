@@ -1,12 +1,18 @@
-# Drop-in Density-Aware Partitioning (DAP)
+# Density-Aware Partitioning (DAP) — Reproducibility (Figures 3–6)
 
-Minimal reproducibility code for example figures.
+This repository provides minimal, self-contained code to reproduce the **example figures (Figures 3–6)** used in the DAP paper.
 
-## Reproduce Figures
+## Requirements
 
-Figure 3:
-python -m scripts.reproduce_fig3a
-python -m scripts.reproduce_fig3b
+- Python >= 3.9
+- NumPy, Matplotlib
 
-Figure 4–6:
-python -m scripts.reproduce_fig456
+## Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/yeomsijin/density-aware-partitioning.git
+cd density-aware-partitioning
+
+pip install -r requirements.txt
