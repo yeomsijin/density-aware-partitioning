@@ -16,3 +16,12 @@ git clone https://github.com/yeomsijin/density-aware-partitioning.git
 cd density-aware-partitioning
 
 pip install -r requirements.txt
+
+
+
+Reproducing Figures:
+python -m scripts.reproduce_fig3a
+python -m scripts.reproduce_fig3b
+python -m scripts.reproduce_fig456
+
+
