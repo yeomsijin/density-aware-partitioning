@@ -7,13 +7,14 @@ from src.models.eif import ObliqueIForest
 from src.models.scif import SCiForest
 from src.plot_utils import plot_row
 
+
 def parse_args():
     p = argparse.ArgumentParser()
-    p.add_argument("--use-lattice", action="store_true", default=True)
+    p.add_argument("--use-lattice", action=argparse.BooleanOptionalAction, default=True)
     p.add_argument("--jitter", type=float, default=0.03)
-    p.add_argument("--high-res", action="store_true", default=True)
-    p.add_argument("--global-scale", action="store_true", default=False)
-    p.add_argument("--show-points", action="store_true", default=True)
+    p.add_argument("--high-res", action=argparse.BooleanOptionalAction, default=True)
+    p.add_argument("--global-scale", action=argparse.BooleanOptionalAction, default=True)
+    p.add_argument("--show-points", action=argparse.BooleanOptionalAction, default=True)
 
     p.add_argument("--n-trees", type=int, default=1000)
     p.add_argument("--sample-size", type=int, default=128)
@@ -24,8 +25,13 @@ def parse_args():
     p.add_argument("--outdir", type=str, default=".")
     return p.parse_args()
 
+
 def main():
     args = parse_args()
+
+    from pathlib import Path
+
+    Path(args.outdir).mkdir(parents=True, exist_ok=True)
 
     # train set
     if args.use_lattice:
@@ -53,14 +59,14 @@ def main():
     )
 
     models = [
-        ("IF",              IsolationForestAD(mode="IF", **common)),
-        ("IF + DAS",        IsolationForestAD(mode="IF+DAS", **common)),
-        ("EIF",             ObliqueIForest(mode="EIF", **common)),
-        ("EIF + DAS",       ObliqueIForest(mode="EIF+DAS", **common)),
-        ("EIF + DAD",       ObliqueIForest(mode="EIF+DAD", **common)),
+        ("IF", IsolationForestAD(mode="IF", **common)),
+        ("IF + DAS", IsolationForestAD(mode="IF+DAS", **common)),
+        ("EIF", ObliqueIForest(mode="EIF", **common)),
+        ("EIF + DAS", ObliqueIForest(mode="EIF+DAS", **common)),
+        ("EIF + DAD", ObliqueIForest(mode="EIF+DAD", **common)),
         ("EIF + DAS + DAD", ObliqueIForest(mode="EIF+DAS+DAD", **common)),
-        ("SCiF",            SCiForest(mode="SCIF", **common)),
-        ("SCiF + DAD",      SCiForest(mode="SCIF+DAD", **common)),
+        ("SCiF", SCiForest(mode="SCIF", **common)),
+        ("SCiF + DAD", SCiForest(mode="SCIF+DAD", **common)),
     ]
 
     Z_list = []
@@ -74,32 +80,54 @@ def main():
 
     if args.global_scale:
         all_scores = np.concatenate(all_scores)
-        vmin = np.percentile(all_scores, 1)
-        vmax = np.percentile(all_scores, 99)
+        vmin = all_scores.min()
+        vmax = all_scores.max()
     else:
         vmin = vmax = None
 
-    out_if   = f"{args.outdir}/IF_row.png"
-    out_eif  = f"{args.outdir}/EIF_row.png"
+    out_if = f"{args.outdir}/IF_row.png"
+    out_eif = f"{args.outdir}/EIF_row.png"
     out_scif = f"{args.outdir}/SCiF_row.png"
 
     plot_row(
-        Z_list=Z_list[:2], grid_x=grid_x, grid_y=grid_y, X_train=X_train,
-        filename=out_if, titles=["IF", "IF + DAS"],
-        show_points=args.show_points, global_scale=args.global_scale, global_vmin=vmin, global_vmax=vmax
+        Z_list=Z_list[:2],
+        grid_x=grid_x,
+        grid_y=grid_y,
+        X_train=X_train,
+        filename=out_if,
+        titles=["IF", "IF + DAS"],
+        show_points=args.show_points,
+        global_scale=args.global_scale,
+        global_vmin=vmin,
+        global_vmax=vmax,
     )
 
     plot_row(
-        Z_list=Z_list[2:6], grid_x=grid_x, grid_y=grid_y, X_train=X_train,
-        filename=out_eif, titles=["EIF", "EIF + DAS", "EIF + DAD", "EIF + DAS + DAD"],
-        show_points=args.show_points, global_scale=args.global_scale, global_vmin=vmin, global_vmax=vmax
+        Z_list=Z_list[2:6],
+        grid_x=grid_x,
+        grid_y=grid_y,
+        X_train=X_train,
+        filename=out_eif,
+        titles=["EIF", "EIF + DAS", "EIF + DAD", "EIF + DAS + DAD"],
+        show_points=args.show_points,
+        global_scale=args.global_scale,
+        global_vmin=vmin,
+        global_vmax=vmax,
     )
 
     plot_row(
-        Z_list=Z_list[6:8], grid_x=grid_x, grid_y=grid_y, X_train=X_train,
-        filename=out_scif, titles=["SCiF", "SCiF + DAD"],
-        show_points=args.show_points, global_scale=args.global_scale, global_vmin=vmin, global_vmax=vmax
+        Z_list=Z_list[6:8],
+        grid_x=grid_x,
+        grid_y=grid_y,
+        X_train=X_train,
+        filename=out_scif,
+        titles=["SCiF", "SCiF + DAD"],
+        show_points=args.show_points,
+        global_scale=args.global_scale,
+        global_vmin=vmin,
+        global_vmax=vmax,
     )
+
 
 if __name__ == "__main__":
     main()
