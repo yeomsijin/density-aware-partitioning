@@ -5,15 +5,17 @@ Audited on 2026-09-22 against the author-supplied final PDFs:
 - Yeom & Jung, *Weighted isolation and random cut forests for anomaly detection*, DOI [10.1007/s11634-026-00688-3](https://doi.org/10.1007/s11634-026-00688-3).
 - Yeom & Jung, *Drop-in density-aware partitioning for tree-based anomaly detection*, DOI [10.1088/2632-2153/ae5390](https://doi.org/10.1088/2632-2153/ae5390).
 
-Original repository revisions (before this update):
+Original repository revisions (before this update), preserved with their Git histories as tags in this unified repository:
 
 | Repository | Revision |
 | --- | --- |
-| [isolation-forest-weighted](https://github.com/yeomsijin/isolation-forest-weighted) | `ba3454a686ac1eb66964cad0100cbc29e7202482` |
-| [rrcf-weighted-](https://github.com/yeomsijin/rrcf-weighted-) | `f702ea2f752ca865fad0dab34810b039bbcbe0d3` |
-| [density-aware-partitioning](https://github.com/yeomsijin/density-aware-partitioning) | `c5bc307320d48534de44b3010b28931ff3e822bc` |
+| [isolation-forest-weighted](https://github.com/yeomsijin/density-aware-forests/tree/legacy-wif) | `ba3454a686ac1eb66964cad0100cbc29e7202482` |
+| [rrcf-weighted-](https://github.com/yeomsijin/density-aware-forests/tree/legacy-wrcf) | `f702ea2f752ca865fad0dab34810b039bbcbe0d3` |
+| [density-aware-partitioning](https://github.com/yeomsijin/density-aware-forests/tree/legacy-dap) | `c5bc307320d48534de44b3010b28931ff3e822bc` |
 
 The audit covers the Python implementation, public exports, packaging, figure entry points and WIF notebook code cells. It does not establish that these public files generated the published numerical tables or figures.
+
+The `legacy-*` tags are historical source snapshots, not package releases. The maintained implementation is on `main`. The old `density-aware-partitioning` URL redirects here; do not reuse that old repository name, because doing so would break the link printed in the Drop-in paper.
 
 ## Findings and corrections
 

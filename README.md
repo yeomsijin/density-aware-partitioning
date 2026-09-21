@@ -9,13 +9,15 @@ Density-aware splitting favors sparse gaps over dense regions. DAP exposes this 
 | Weighted isolation and random cut forests for anomaly detection | WIF, WRCF | [Advances in Data Analysis and Classification (2026)](https://doi.org/10.1007/s11634-026-00688-3) |
 | Drop-in density-aware partitioning for tree-based anomaly detection | DAS, DAD; IF, EIF, SCiF | [Machine Learning: Science and Technology 7, 025035 (2026)](https://doi.org/10.1088/2632-2153/ae5390) |
 
-The repository URL remains unchanged because the Drop-in paper links here. Earlier WIF/WRCF repositories remain available as historical references. See the [implementation audit](docs/PAPER_AUDIT.md), [API and migration guide](docs/API.md), and [validation scope](docs/VALIDATION.md).
+This repository brings both papers together under **Density-Aware Forests**. The former `density-aware-partitioning` URL cited in the Drop-in paper redirects here. Original WIF, WRCF and DAP code histories are preserved in the `legacy-wif`, `legacy-wrcf` and `legacy-dap` tags; use `main` for the maintained library. See the [implementation audit](docs/PAPER_AUDIT.md), [API and migration guide](docs/API.md), and [validation scope](docs/VALIDATION.md).
 
 ## Installation
 
-Python 3.10 or newer. From a checkout of this repository:
+Python 3.10 or newer. Clone the unified repository and install:
 
 ```bash
+git clone https://github.com/yeomsijin/density-aware-forests.git
+cd density-aware-forests
 python -m pip install .
 # Optional plotting examples and development tools:
 python -m pip install -e ".[dev]"

@@ -8,7 +8,7 @@ authors:
     given-names: Sijin
   - family-names: Jung
     given-names: Jae-Hun
-repository-code: "https://github.com/yeomsijin/density-aware-partitioning"
+repository-code: "https://github.com/yeomsijin/density-aware-forests"
 license: MIT
 references:
   - type: article
