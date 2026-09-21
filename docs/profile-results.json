@@ -1,0 +1,29 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "repeats": 3,
+  "seed": 42,
+  "trees": 25,
+  "train_shape": [
+    256,
+    4
+  ],
+  "query_shape": [
+    2000,
+    4
+  ],
+  "subsample": 128,
+  "score": {
+    "scalar_seconds": 0.07456441601971164,
+    "batch_seconds": 0.005930040962994099,
+    "speedup": 12.574013651005846
+  },
+  "sd_gain": {
+    "n": 256,
+    "original_loop_seconds": 0.00019395799608901143,
+    "vectorized_seconds": 4.441698547452688e-05,
+    "speedup": 4.366752809018213
+  },
+  "note": "Same-operation microbenchmarks; not paper accuracy/runtime reproduction. SD reference is the original c5bc307 prefix-sum Python loop."
+}

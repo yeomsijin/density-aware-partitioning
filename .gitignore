@@ -1,12 +1,10 @@
 __pycache__/
-*.pyc
-.ipynb_checkpoints/
-.DS_Store
-
-# outputs
-experiements/
-figs/
-
-# outputs
-experiements/
-figs/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+.venv/
+figures/
+benchmark-results/

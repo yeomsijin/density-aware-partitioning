@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "Cite the weighted paper for WIF/WRCF and the Drop-in paper for DAS/DAD; see references.bib."
+title: "Density-Aware Forests: WIF, WRCF and DAP"
+type: software
+version: 0.2.0
+authors:
+  - family-names: Yeom
+    given-names: Sijin
+  - family-names: Jung
+    given-names: Jae-Hun
+repository-code: "https://github.com/yeomsijin/density-aware-partitioning"
+license: MIT
+references:
+  - type: article
+    title: "Weighted isolation and random cut forests for anomaly detection"
+    authors:
+      - {family-names: Yeom, given-names: Sijin}
+      - {family-names: Jung, given-names: Jae-Hun}
+    journal: "Advances in Data Analysis and Classification"
+    year: 2026
+    doi: "10.1007/s11634-026-00688-3"
+  - type: article
+    title: "Drop-in density-aware partitioning for tree-based anomaly detection"
+    authors:
+      - {family-names: Yeom, given-names: Sijin}
+      - {family-names: Jung, given-names: Jae-Hun}
+    journal: "Machine Learning: Science and Technology"
+    year: 2026
+    volume: 7
+    issue: 2
+    start: "025035"
+    doi: "10.1088/2632-2153/ae5390"

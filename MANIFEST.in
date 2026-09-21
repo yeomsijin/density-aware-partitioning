@@ -1,0 +1,4 @@
+include CITATION.cff references.bib CHANGELOG.md
+recursive-include docs *.md *.txt *.json *.yml
+recursive-include examples *.py
+recursive-include tests *.py
