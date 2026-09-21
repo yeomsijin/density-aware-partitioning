@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "Cite the weighted paper for WIF/WRCF and the Drop-in paper for DAS/DAD; see references.bib."
-title: "Density-Aware Forests: WIF, WRCF and DAP"
+title: "WIF, WRCF and DAP: Density-Aware Forests"
 type: software
 version: 0.2.0
 authors:
@@ -8,7 +8,7 @@ authors:
     given-names: Sijin
   - family-names: Jung
     given-names: Jae-Hun
-repository-code: "https://github.com/yeomsijin/density-aware-forests"
+repository-code: "https://github.com/yeomsijin/WIF-WRCF-DAP"
 license: MIT
 references:
   - type: article

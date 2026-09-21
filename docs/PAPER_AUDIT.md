@@ -9,9 +9,9 @@ Original repository revisions (before this update), preserved with their Git his
 
 | Repository | Revision |
 | --- | --- |
-| [isolation-forest-weighted](https://github.com/yeomsijin/density-aware-forests/tree/legacy-wif) | `ba3454a686ac1eb66964cad0100cbc29e7202482` |
-| [rrcf-weighted-](https://github.com/yeomsijin/density-aware-forests/tree/legacy-wrcf) | `f702ea2f752ca865fad0dab34810b039bbcbe0d3` |
-| [density-aware-partitioning](https://github.com/yeomsijin/density-aware-forests/tree/legacy-dap) | `c5bc307320d48534de44b3010b28931ff3e822bc` |
+| [isolation-forest-weighted](https://github.com/yeomsijin/WIF-WRCF-DAP/tree/legacy-wif) | `ba3454a686ac1eb66964cad0100cbc29e7202482` |
+| [rrcf-weighted-](https://github.com/yeomsijin/WIF-WRCF-DAP/tree/legacy-wrcf) | `f702ea2f752ca865fad0dab34810b039bbcbe0d3` |
+| [density-aware-partitioning](https://github.com/yeomsijin/WIF-WRCF-DAP/tree/legacy-dap) | `c5bc307320d48534de44b3010b28931ff3e822bc` |
 
 The audit covers the Python implementation, public exports, packaging, figure entry points and WIF notebook code cells. It does not establish that these public files generated the published numerical tables or figures.
 

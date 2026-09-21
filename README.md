@@ -1,4 +1,4 @@
-# Density-Aware Forests
+# WIF · WRCF · DAP
 
 Reusable implementations of **Weighted Isolation Forest (WIF)**, **Weighted Random Cut Forest (WRCF)**, and **Density-Aware Partitioning (DAP)** by Sijin Yeom and Jae-Hun Jung.
 
@@ -9,21 +9,21 @@ Density-aware splitting favors sparse gaps over dense regions. DAP exposes this 
 | Weighted isolation and random cut forests for anomaly detection | WIF, WRCF | [Advances in Data Analysis and Classification (2026)](https://doi.org/10.1007/s11634-026-00688-3) |
 | Drop-in density-aware partitioning for tree-based anomaly detection | DAS, DAD; IF, EIF, SCiF | [Machine Learning: Science and Technology 7, 025035 (2026)](https://doi.org/10.1088/2632-2153/ae5390) |
 
-This repository brings both papers together under **Density-Aware Forests**. The former `density-aware-partitioning` URL cited in the Drop-in paper redirects here. Original WIF, WRCF and DAP code histories are preserved in the `legacy-wif`, `legacy-wrcf` and `legacy-dap` tags; use `main` for the maintained library. See the [implementation audit](docs/PAPER_AUDIT.md), [API and migration guide](docs/API.md), and [validation scope](docs/VALIDATION.md).
+This repository brings both papers together under **WIF-WRCF-DAP**. The former `density-aware-partitioning` URL cited in the Drop-in paper redirects here. Original WIF, WRCF and DAP code histories are preserved in the `legacy-wif`, `legacy-wrcf` and `legacy-dap` tags; use `main` for the maintained library. See the [implementation audit](docs/PAPER_AUDIT.md), [API and migration guide](docs/API.md), and [validation scope](docs/VALIDATION.md).
 
 ## Installation
 
 Python 3.10 or newer. Clone the unified repository and install:
 
 ```bash
-git clone https://github.com/yeomsijin/density-aware-forests.git
-cd density-aware-forests
+git clone https://github.com/yeomsijin/WIF-WRCF-DAP.git
+cd WIF-WRCF-DAP
 python -m pip install .
 # Optional plotting examples and development tools:
 python -m pip install -e ".[dev]"
 ```
 
-The distribution is named `density-aware-forests`. No PyPI release is implied by this README. NumPy and scikit-learn are runtime dependencies; Matplotlib is optional.
+The Python distribution is named `density-aware-forests`, and the import namespace is `density_aware_forests`. No PyPI release is implied by this README. NumPy and scikit-learn are runtime dependencies; Matplotlib is optional.
 
 ## WIF in a few lines
 

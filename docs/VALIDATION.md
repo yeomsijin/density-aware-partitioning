@@ -2,7 +2,7 @@
 
 Local validation on 2026-09-22 used Python 3.12.14, NumPy 2.5.3 and scikit-learn 1.9.1 on macOS arm64. The active [GitHub Actions workflow](../.github/workflows/tests.yml) runs on pushes and pull requests, with Python 3.10/3.12 jobs across Linux, macOS and Windows and a NumPy 1.24.4 / scikit-learn 1.4.2 minimum-dependency job.
 
-All five jobs passed in the [first remote run](https://github.com/yeomsijin/density-aware-forests/actions/runs/35665406009) at commit `228251d`. The four platform jobs run the tests, Ruff, package builds and both examples; the minimum-dependency job installs the package and runs the tests.
+All five jobs passed in the [first remote run](https://github.com/yeomsijin/WIF-WRCF-DAP/actions/runs/35665406009) at commit `228251d`. The four platform jobs run the tests, Ruff, package builds and both examples; the minimum-dependency job installs the package and runs the tests.
 
 ## Mathematical and regression checks
 
