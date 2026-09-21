@@ -33,7 +33,7 @@ The audit covers the Python implementation, public exports, packaging, figure en
 | DAP oblique models | Uses all features; no q parameter. | Add `max_features`; q=2 benchmark configurations are explicit. |
 | DAP `BaseIForest.fit` | Mutates max_depth on first fit and advances a stored RNG, so refits depend on fit history. | Learned `max_depth_`, fresh RNG for integer seeds, input validation and fitted checks. |
 | DAP Fig. 3(a) script | Repeatedly samples a "random" direction until a slope constraint holds. | Default visual comparison now uses one unconditioned random draw. |
-| Packaging / README | WIF/WRCF lack a usable root package setup; DAP installs a generic `src` namespace and the README has an unclosed fence. | One wheel, unified public namespace, documented dependencies, examples, a CI template, citations and retained upstream notices. |
+| Packaging / README | WIF/WRCF lack a usable root package setup; DAP installs a generic `src` namespace and the README has an unclosed fence. | One wheel, unified public namespace, documented dependencies, examples, automated CI, citations and retained upstream notices. |
 
 ## Finite evaluation of the counting map
 

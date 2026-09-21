@@ -125,7 +125,7 @@ python -m pytest -q
 python -m build
 ```
 
-A [GitHub Actions template](docs/ci/github-actions.yml) covers supported platforms and minimum dependencies. It is currently inactive; copy it to `.github/workflows/tests.yml` with workflow-write permission to enable remote CI.
+[GitHub Actions](.github/workflows/tests.yml) runs automatically on pushes and pull requests. It checks Python 3.10/3.12 across Linux, macOS and Windows, plus the minimum supported NumPy/scikit-learn versions. See the [validation record](docs/VALIDATION.md) for local and remote results.
 
 The original figure entry points now use the corrected core. Their results can differ from historical images:
 

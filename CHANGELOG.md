@@ -7,5 +7,5 @@
 - Make integer-seeded refits reproducible; add parameter/input validation and batched IF-family scoring.
 - Fix weighted tree exports, current NumPy compatibility, duplicate/singleton handling and the one-row bounding-box insertion bug.
 - Add explicit weighted rebuild updates and rolling-window stream support; retain uniform incremental insertion as an opt-in legacy mode.
-- Add audit, API migration, citations, provenance, tests, a CI template, examples and explicit-array benchmark runner.
+- Add audit, API migration, citations, provenance, tests, automated CI, examples and explicit-array benchmark runner.
 - Preserve original figure commands through adapters; corrected results are not promised to match historical pixels or benchmark values.
